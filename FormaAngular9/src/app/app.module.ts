@@ -6,6 +6,8 @@ import { CvComponent } from './components/cvTech/cv/cv.component';
 import { ListCVComponent } from './components/cvTech/list-cv/list-cv.component';
 import { ItemCVComponent } from './components/cvTech/item-cv/item-cv.component';
 import { DetailsCvComponent } from './components/cvTech/details-cv/details-cv.component';
+import { StyleComponent } from './directive/style/style.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,10 +15,13 @@ import { DetailsCvComponent } from './components/cvTech/details-cv/details-cv.co
     CvComponent,
     ListCVComponent,
     ItemCVComponent,
-    DetailsCvComponent
+    DetailsCvComponent,
+    StyleComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
