@@ -13,6 +13,10 @@ export class ColorComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  processReq(message: any){
+    alert(message);
+  }
+
   // public changeColor(input){
   //   console.log(input.value);
   //   this.color = input.value;
