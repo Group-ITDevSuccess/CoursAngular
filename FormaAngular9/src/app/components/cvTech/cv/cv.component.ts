@@ -21,6 +21,7 @@ export class CvComponent implements OnInit {
       new Person(2, 'Fatima', 'FANO', 21, "tim_logo.png", 25252525, 'Teacher'),
       new Person(3, 'Inconnu', 'Test', 45, "", 252522825, 'Formateur'),
     ];
+    this.premierService.addData('Data from cv component');
     this.premierService.logger(this.personnes);
   }
 
