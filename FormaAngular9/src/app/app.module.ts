@@ -8,6 +8,7 @@ import { ItemCVComponent } from './components/cvTech/item-cv/item-cv.component';
 import { DetailsCvComponent } from './components/cvTech/details-cv/details-cv.component';
 import { StyleComponent } from './directive/style/style.component';
 import { FormsModule } from '@angular/forms';
+import { ClassComponent } from './directive/class/class.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     ListCVComponent,
     ItemCVComponent,
     DetailsCvComponent,
-    StyleComponent
+    StyleComponent,
+    ClassComponent
   ],
   imports: [
     BrowserModule,
