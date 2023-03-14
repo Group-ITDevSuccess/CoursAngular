@@ -16,6 +16,7 @@ export class CvComponent implements OnInit {
     this.personnes = [
       new Person(1, 'Muriel', 'TSIDIANY', 22, "tim_logo.png", 256525666, 'Developper'),
       new Person(2, 'Fatima', 'FANO', 21, "tim_logo.png", 25252525, 'Teacher'),
+      new Person(3, 'Inconnu', 'Test', 45, "", 252522825, 'Formateur'),
 
     ];
   }

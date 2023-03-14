@@ -1,8 +1,12 @@
 <li class="list-group-item" (click)="selectPersonne()">
   <img
     class="img-circle" width="50px"
-    height="50px" alt="{{personne.firstname}}"
-    src="assets/images/{{personne.path}}"
-    >{{personne.firstname}} {{personne.name}}
+    height="50px" alt="{{personne?.firstname}}"
+    src="assets/images/{{personne?.path|defaultImage}}"
+    >{{personne?.firstname}} {{personne?.name}}
 </li>
+
+<!-- <pre>
+  {{personne|json}}
+</pre> -->
 
