@@ -14,7 +14,7 @@ export class StyleComponent implements OnInit {
   ngOnInit(): void {
   }
   changeSize(size){
-    this.size = size + 'px';
+    this.size = `${size}px`;
   }
 
 
