@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClassComponent implements OnInit {
 
+  teams = [
+    'est',
+    'om',
+    'barca',
+    'milan'
+  ];
   est = true;
   milan= false;
   barca= false;
