@@ -1,0 +1,15 @@
+<div class="container" *ngIf="personne">
+  <h2 class="text-center">Informations sur la CV de {{personne.firstname}} {{personne.name}}</h2>   
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body text-center">
+          <img class="card-img-top" src="assets/images/{{personne.path|defaultImage}}" alt="Image du chemin">
+          <h5 class="card-title">{{personne.job}}</h5>
+          <p class="card-text">Age : {{personne.age}}</p>
+          <p class="card-text">CIN : {{personne.cin}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -20,6 +20,7 @@ import { ColorComponent } from './color/color.component';
 import { FilsComponent } from './fils/fils.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterSimulatorComponent } from './router/router-simulator/router-simulator.component';
+import { DetailComponent } from './components/cvTech/detail/detail.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { RouterSimulatorComponent } from './router/router-simulator/router-simul
     ColorComponent,
     FilsComponent,
     HeaderComponent,
-    RouterSimulatorComponent
+    RouterSimulatorComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

@@ -17,4 +17,12 @@ export class CvService {
    getPersonnes(): Person[]{
     return this.personnes;
    }
+
+   getPersonneById(id: number): Person{
+    const personne = this.personnes.find(personne => {
+      return personne.id == id
+    });
+
+    return personne;
+   }
 }

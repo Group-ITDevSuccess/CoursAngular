@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { EmbaucheService } from './../embauche.service';
 import { Person } from './../../../models/Person';
 import { Component, Input, OnInit } from '@angular/core';
@@ -11,7 +12,9 @@ export class DetailsCvComponent implements OnInit {
 
   @Input() personne: Person;
   constructor(
-    private embaucheService: EmbaucheService
+    private embaucheService: EmbaucheService,
+    private router: Router
+
   ) { }
 
   ngOnInit(): void {
@@ -19,5 +22,10 @@ export class DetailsCvComponent implements OnInit {
 
   embaucher(){
     this.embaucheService.embaucher(this.personne);
+  }
+
+  moreInfo(){
+    const link = ['cv',  this.personne.id];
+    this.router.navigate(link);
   }
 }

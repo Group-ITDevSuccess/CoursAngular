@@ -1,4 +1,4 @@
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PremierService } from './../components/service/premier.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -12,10 +12,17 @@ export class ColorComponent implements OnInit {
   color ='red';
   constructor(
     private premierService: PremierService,
-    private router: Router
+    private router: Router,
+    private activatedRoute: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
+    this.activatedRoute.params.subscribe(
+      (params) => {
+        // console.log(params);
+        this.color=params['default'];
+      }
+    );
   }
 
   processReq(message: any){
