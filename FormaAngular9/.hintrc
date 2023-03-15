@@ -3,7 +3,10 @@
     "development"
   ],
   "hints": {
+<<<<<<< HEAD
     "axe/text-alternatives": "off",
+=======
+>>>>>>> Partie4
     "axe/forms": [
       "default",
       {

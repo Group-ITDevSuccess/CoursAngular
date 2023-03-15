@@ -1,0 +1,9 @@
+<app-fils (sendRequestToData)="processReq($event)" [filsProperty]="color"></app-fils>
+<div [style.backgroundColor] = "color">
+  Color : {{color}}
+</div>
+<!-- <input #inputColor
+  (change) = "changeColor(inputColor)"
+  type="text"  class="form-control"> -->
+
+<input type="text" [(ngModel)]="color" class="form-control">
