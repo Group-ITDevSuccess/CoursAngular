@@ -21,6 +21,9 @@ import { FilsComponent } from './fils/fils.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterSimulatorComponent } from './router/router-simulator/router-simulator.component';
 import { DetailComponent } from './components/cvTech/detail/detail.component';
+import { AddCvComponent } from './components/cvTech/add-cv/add-cv.component';
+import { DeleteCvComponent } from './components/cvTech/delete-cv/delete-cv.component';
+import { ErrorComponent } from './components/error/error.component';
 
 
 @NgModule({
@@ -40,7 +43,10 @@ import { DetailComponent } from './components/cvTech/detail/detail.component';
     FilsComponent,
     HeaderComponent,
     RouterSimulatorComponent,
-    DetailComponent
+    DetailComponent,
+    AddCvComponent,
+    DeleteCvComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
