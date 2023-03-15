@@ -4,8 +4,9 @@ import { RouterModule, Routes } from "@angular/router";
 
 
 const APP_ROUTING: Routes = [
-  {path: 'cv', component: CvComponent},
-  {path: 'color', component: ColorComponent}
+  {path: 'cv', redirectTo:'/', pathMatch: 'full'},
+  {path: '', component: CvComponent},
+  {path: 'color/:default', component: ColorComponent}
 ];
 
 export const ROUTING = RouterModule.forRoot(APP_ROUTING);

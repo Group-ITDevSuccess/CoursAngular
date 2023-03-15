@@ -18,6 +18,8 @@ import { EmbaucheComponent } from './components/cvTech/embauche/embauche.compone
 
 import { ColorComponent } from './color/color.component';
 import { FilsComponent } from './fils/fils.component';
+import { HeaderComponent } from './components/header/header.component';
+import { RouterSimulatorComponent } from './router/router-simulator/router-simulator.component';
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import { FilsComponent } from './fils/fils.component';
     DefaultImagePipe,
     EmbaucheComponent,
     ColorComponent,
-    FilsComponent
+    FilsComponent,
+    HeaderComponent,
+    RouterSimulatorComponent
   ],
   imports: [
     BrowserModule,

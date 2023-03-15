@@ -7,3 +7,8 @@
   type="text"  class="form-control"> -->
 
 <input type="text" [(ngModel)]="color" class="form-control">
+
+Le contenu de la premier color est {{color}}
+<button (click)="loggerMesData()">Log Data</button>
+<br>
+<a (click)="goToCv()">Go to CV</a>
