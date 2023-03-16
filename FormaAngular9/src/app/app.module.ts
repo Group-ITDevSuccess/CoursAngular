@@ -27,6 +27,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { LoginComponent } from './components/login/login.component';
 import { ObservableComponent } from './components/observable/observable.component';
 import { HttpComponent } from './components/http/http.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -57,6 +58,7 @@ import { HttpComponent } from './components/http/http.component';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     ROUTING
   ],
   providers: [],
