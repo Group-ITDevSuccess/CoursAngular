@@ -1,3 +1,4 @@
+import { LoginComponent } from './components/login/login.component';
 import { DetailComponent } from './components/cvTech/detail/detail.component';
 import { ColorComponent } from './color/color.component';
 import { CvComponent } from './components/cvTech/cv/cv.component';
@@ -18,6 +19,7 @@ const APP_ROUTING: Routes = [
   // {path: 'cv', redirectTo:'/', pathMatch: 'full'},
   {path: '', component: CvComponent},
   {path: 'color/:default', component: ColorComponent},
+  {path: 'login', component: LoginComponent},
   {path: '**', component: ErrorComponent},
 
 ];

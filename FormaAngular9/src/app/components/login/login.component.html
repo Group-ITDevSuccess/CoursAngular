@@ -1,0 +1,15 @@
+<h2>Formulaire de Connexion</h2>
+
+<form #loginFormulaire="ngForm">
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input email required ngModel name="email" type="text" id="email" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label for="pwd">PassWord</label>
+    <input type="password" minlength="4" ngModel name="password" id="pwd" class="form-control" />
+  </div>
+
+  <button [disabled]="loginFormulaire.invalid" class="btn btn-primary" (click)="login(loginFormulaire)">Se Connecter</button>
+</form>
