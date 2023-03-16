@@ -23,5 +23,6 @@
       <div class="alter alert-danger" *ngIf="pwdInput.invalid && pwdInput.touched"> Le PassWord doit avoir au minimum 4 caractères !</div>
   </div>
 
-  <button [disabled]="loginFormulaire.invalid" class="btn btn-primary" (click)="login(loginFormulaire)">Se Connecter</button>
+  <button [disabled]="loginFormulaire.invalid" class="btn btn-primary" (click)="login(loginFormulaire.value)">Se Connecter</button>
 </form>
+ 
