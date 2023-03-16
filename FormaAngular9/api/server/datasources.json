@@ -4,13 +4,13 @@
     "connector": "memory"
   },
   "mysql": {
-    "name": "mysql",
-    "connector": "mysql",
     "host": "localhost",
     "port": 3306,
-    "url":"", 
-    "user": "root",
+    "url": "",
+    "database": "pratique_angular",
     "password": "AllahSeul",
-    "database": "pratique_angular"
+    "name": "mysql",
+    "connector": "mysql",
+    "user": "root"
   }
 }

@@ -26,7 +26,6 @@ export class LoginComponent implements OnInit {
         this.router.navigate(link);
       }
     );
-    console.log(credentials);
   }
 
 } 
