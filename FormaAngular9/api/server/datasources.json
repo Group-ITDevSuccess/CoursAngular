@@ -2,5 +2,15 @@
   "db": {
     "name": "db",
     "connector": "memory"
+  },
+  "mysql": {
+    "name": "mysql",
+    "connector": "mysql",
+    "host": "localhost",
+    "port": 3306,
+    "url":"", 
+    "user": "root",
+    "password": "AllahSeul",
+    "database": "pratique_angular"
   }
 }

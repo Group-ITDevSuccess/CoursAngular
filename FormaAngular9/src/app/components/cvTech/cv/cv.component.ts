@@ -17,7 +17,16 @@ export class CvComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.personnes = this.cvService.getPersonnes();
+    /* this.personnes = this.cvService.getPersonnes(); */
+    this.cvService.getPersonnes().subscribe(
+      (personnes)=>{
+        this.personnes = personnes;
+      },
+      (error)=>{
+        alert('Probleme d\'acces au donner, les donnée sont fake !');
+        this.personnes = this.cvService.getFakePersonne();
+      }
+    );
   }
 
   selectPersonne(personne){
