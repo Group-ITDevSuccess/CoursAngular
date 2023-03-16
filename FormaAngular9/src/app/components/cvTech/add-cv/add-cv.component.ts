@@ -10,6 +10,7 @@ import { NgForm } from '@angular/forms';
 })
 export class AddCvComponent implements OnInit {
 
+  errorMsg ='';
   constructor(
     private cvService: CvService,
     private router: Router
@@ -19,9 +20,18 @@ export class AddCvComponent implements OnInit {
   }
 
   addPersonne(formulaire: NgForm){
-    const link =  ['cv'];
-    this.cvService.addPersonne(formulaire.value);
-    this.router.navigate(link);
+    
+    this.cvService.addPersonne(formulaire.value).subscribe(
+      (reponse) => {
+        const link = ['cv'];
+        this.router.navigate(link);
+        console.log(reponse);
+      },
+      (error)=>{
+        this.errorMsg = "Probleme de connexion a votre serveur!";
+        console.log(error);
+      }
+    );
   }
 
 }

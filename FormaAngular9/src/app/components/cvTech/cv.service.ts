@@ -29,17 +29,16 @@ export class CvService {
     return this.personnes;
    }
 
-   getPersonneById(id: number): Person{
-    const personne = this.personnes.find(personne => {
-      return personne.id == id
-    });
-
-    return personne;
+   getPersonneById(id: number): Observable<Person>{
+    
+    return this.http.get<Person>(this.link+`/${id}`);
    }
 
-   addPersonne(personne: Person): void{
-    console.log(personne);
-    personne.id = this.personnes[this.personnes.length - 1].id + 1;
-    this.personnes.push(personne);
+   addPersonne(personne: Person): Observable<any>{
+    return this.http.post(this.link, personne);
+   }
+
+   deletePersonne(id: number){
+    return this.http.delete(this.link+`/${id}`);
    }
 }
