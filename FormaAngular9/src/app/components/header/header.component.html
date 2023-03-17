@@ -7,10 +7,10 @@
     <div class="navbar-nav">
       <a class="nav-item nav-link" [routerLink]="['']" routerLinkActive="router-link-active">Home <span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" [routerLink]="['cv']" routerLinkActive="router-link-active">CV <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" [routerLink]="['cv/add']" routerLinkActive="router-link-active">Add CV<span class="sr-only">(current)</span></a>
+      <a *ngIf="authentificationService.isLogged()" class="nav-item nav-link" [routerLink]="['cv/add']" routerLinkActive="router-link-active">Add CV<span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" [routerLink]="['color']" routerLinkActive="router-link-active" >Color</a>
-      <a class="nav-item nav-link" [routerLink]="['login']" routerLinkActive="router-link-active" >Login</a>
-      <a class="nav-item nav-link" (click)="logout()" >Logout</a>
+      <a *ngIf="! authentificationService.isLogged()" class="nav-item nav-link" [routerLink]="['login']" routerLinkActive="router-link-active" >Login</a>
+      <a *ngIf="authentificationService.isLogged()" class="nav-item nav-link" (click)="logout()" >Logout</a>
     </div>
   </div>
 </nav>

@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { CvComponent } from './components/cvTech/cv/cv.component';
 import { ListCVComponent } from './components/cvTech/list-cv/list-cv.component';
 import { ItemCVComponent } from './components/cvTech/item-cv/item-cv.component';
+import { LogoutGuard } from './guard/logout.guard';
 import { DetailsCvComponent } from './components/cvTech/details-cv/details-cv.component';
 import { StyleComponent } from './directive/style/style.component';
 import { FormsModule } from '@angular/forms';
@@ -58,12 +59,12 @@ import { LoginGuard } from './guard/login.guard';
     HttpComponent
   ],
   imports: [
-    BrowserModule,
+  BrowserModule,
     FormsModule,
     HttpClientModule,
     ROUTING
   ],
-  providers: [LoginInterceptorProvider, LoginGuard],
+  providers: [LoginInterceptorProvider, LoginGuard, LogoutGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

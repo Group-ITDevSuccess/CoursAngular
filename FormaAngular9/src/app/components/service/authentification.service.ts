@@ -12,6 +12,10 @@ export class AuthentificationService {
     private http: HttpClient
   ) { }
 
+  isLogged(){
+    return !! localStorage.getItem('token');
+  }
+
   login(credentials):Observable<any>{
     return this.http.post<any>(this.link, credentials);
   }
