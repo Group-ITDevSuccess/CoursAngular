@@ -1,5 +1,4 @@
 import { ROUTING } from './app.routing';
-import { PremierService } from './components/service/premier.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -23,7 +22,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { RouterSimulatorComponent } from './router/router-simulator/router-simulator.component';
 import { DetailComponent } from './components/cvTech/detail/detail.component';
 import { AddCvComponent } from './components/cvTech/add-cv/add-cv.component';
-import { DeleteCvComponent } from './components/cvTech/delete-cv/delete-cv.component';
 import { ErrorComponent } from './components/error/error.component';
 import { LoginComponent } from './components/login/login.component';
 import { ObservableComponent } from './components/observable/observable.component';
@@ -31,6 +29,7 @@ import { HttpComponent } from './components/http/http.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginInterceptorProvider } from './interceptors/login.interceptor';
 import { LoginGuard } from './guard/login.guard';
+import { UpdateCvComponent } from './components/cvTech/update-cv/update-cv.component';
 
 
 @NgModule({
@@ -52,11 +51,11 @@ import { LoginGuard } from './guard/login.guard';
     RouterSimulatorComponent,
     DetailComponent,
     AddCvComponent,
-    DeleteCvComponent,
     ErrorComponent,
     LoginComponent,
     ObservableComponent,
-    HttpComponent
+    HttpComponent,
+    UpdateCvComponent
   ],
   imports: [
   BrowserModule,

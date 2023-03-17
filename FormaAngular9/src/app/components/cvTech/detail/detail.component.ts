@@ -46,4 +46,9 @@ export class DetailComponent implements OnInit {
     );
   }
 
+  updatePersonne(id: number){
+    const link = ['cv/updateCv', id];
+    this.router.navigate(link);
+  }
+
 }

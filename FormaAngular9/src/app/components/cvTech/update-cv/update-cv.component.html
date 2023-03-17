@@ -1,0 +1,35 @@
+<form #formulaire="ngForm">
+  <div class="form-group">
+      <label for="name">Name</label>
+      <input required id="name" type="text" class="form-control" [(ngModel)]="personne.name" name="name"/>
+  </div>
+
+  <div class="form-group">
+      <label for="firstname">First Name</label>
+      <input id="firstname" type="text" class="form-control" [(ngModel)]="personne.firstname" name="firstname"/>
+  </div>
+
+  <div class="form-group">
+      <label for="job">Job</label>
+      <input required id="job" type="text" class="form-control" [(ngModel)]="personne.job" name="job"/>
+  </div>
+
+  <div class="form-group">
+      <label for="age">Age</label>
+      <input min="0" max="170" id="age" type="number" class="form-control" [(ngModel)]="personne.age" name="age"/>
+  </div>
+
+  <div class="form-group">
+      <label for="cin">CIN</label>
+      <input  required id="cin" type="number" class="form-control" [(ngModel)]="personne.cin" name="cin"/>
+  </div>
+
+  <div class="form-group">
+      <label for="path">Image</label>
+      <input id="path" type="text" class="form-control" [(ngModel)]="personne.path" name="path"/>
+  </div>
+
+  <button [disabled]="formulaire.invalid" type="submit" class="btn btn-primary" (click)="updatePersonne()">
+      <i class="fas fa-save"></i> Mettre à Jour
+  </button>
+</form>

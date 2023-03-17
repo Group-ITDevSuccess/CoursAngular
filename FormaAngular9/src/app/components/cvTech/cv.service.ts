@@ -42,4 +42,8 @@ export class CvService {
    deletePersonne(id: number){
     return this.http.delete(this.link+`/${id}`);
    }
+
+   updatePersonne(personne: Person): Observable<Person>{
+    return this.http.put<Person>(this.link, personne);
+   }
 }

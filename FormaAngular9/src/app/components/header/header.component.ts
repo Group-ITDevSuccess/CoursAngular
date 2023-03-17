@@ -7,6 +7,9 @@ import { AuthentificationService } from './../service/authentification.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  visibility = false;
+  valueHidden = false;
+  isLoggerValue = false;
 
   constructor(
     private authentificationService: AuthentificationService
@@ -17,6 +20,12 @@ export class HeaderComponent implements OnInit {
 
   logout(){
     this.authentificationService.logout();
+  }
+
+
+
+  show(){
+    this.visibility = ! this.visibility;
   }
 
 }
