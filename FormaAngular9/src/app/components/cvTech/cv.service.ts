@@ -30,17 +30,17 @@ export class CvService {
    }
 
    getPersonneById(id: number): Observable<Person>{
-    
+
     return this.http.get<Person>(this.link+`/${id}`);
    }
 
   addPersonne(personne: Person): Observable<any>{
-    const token = localStorage.getItem('token'); 
+    /* const token = localStorage.getItem('token');
 
     if(token){
       const params = new HttpParams().set('access_token', token);
       return this.http.post(this.link, personne, {params});
-    }
+    } */
     return this.http.post(this.link, personne);
    }
 

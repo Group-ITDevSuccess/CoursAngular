@@ -30,6 +30,8 @@ export class AddCvComponent implements OnInit {
       (error)=>{
         this.errorMsg = "Probleme de connexion a votre serveur!";
         console.log(error);
+      }, () =>{
+        console.log("Completed");
       }
     );
   }
