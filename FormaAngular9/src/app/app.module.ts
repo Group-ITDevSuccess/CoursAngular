@@ -30,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginInterceptorProvider } from './interceptors/login.interceptor';
 import { LoginGuard } from './guard/login.guard';
 import { UpdateCvComponent } from './components/cvTech/update-cv/update-cv.component';
+import { SearchComponent } from './components/cvTech/search/search.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { UpdateCvComponent } from './components/cvTech/update-cv/update-cv.compo
     LoginComponent,
     ObservableComponent,
     HttpComponent,
-    UpdateCvComponent
+    UpdateCvComponent,
+    SearchComponent
   ],
   imports: [
   BrowserModule,

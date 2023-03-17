@@ -1,16 +1,67 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" [routerLink]="['']" routerLinkActive="router-link-active" >CvTech</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  <a
+    class="navbar-brand"
+    [routerLink]="['']"
+    routerLinkActive="router-link-active"
+    >CvTech</a
+  >
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
     <span class="navbar-toggler-icon" (click)="show()"></span>
   </button>
-  <div class="collapse navbar-collapse" [ngClass]="{'show': visibility}" id="navbarNavAltMarkup">
+  <div
+    class="collapse navbar-collapse"
+    [ngClass]="{ show: visibility }"
+    id="navbarNavAltMarkup"
+  >
     <div class="navbar-nav">
-      <a class="nav-item nav-link" [routerLink]="['']" routerLinkActive="router-link-active">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" [routerLink]="['cv']" routerLinkActive="router-link-active">CV <span class="sr-only">(current)</span></a>
-      <a *ngIf="authentificationService.isLogged()" class="nav-item nav-link" [routerLink]="['cv/add']" routerLinkActive="router-link-active">Add CV<span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" [routerLink]="['color']" routerLinkActive="router-link-active" >Color</a>
-      <a *ngIf="! authentificationService.isLogged()" class="nav-item nav-link" [routerLink]="['login']" routerLinkActive="router-link-active" >Login</a>
-      <a *ngIf="authentificationService.isLogged()" class="nav-item nav-link" (click)="logout()" >Logout</a>
+      <a
+        class="nav-item nav-link"
+        [routerLink]="['']"
+        routerLinkActive="router-link-active"
+      >
+        Home
+        <span class="sr-only">(current)</span></a
+      >
+      <a
+        class="nav-item nav-link"
+        [routerLink]="['cv']"
+        routerLinkActive="router-link-active"
+        >CV <span class="sr-only">(current)</span></a
+      >
+      <a
+        *ngIf="isLogged()"
+        class="nav-item nav-link"
+        [routerLink]="['cv/add']"
+        routerLinkActive="router-link-active"
+        >Add CV<span class="sr-only">(current)</span></a
+      >
+      <a
+        class="nav-item nav-link"
+        [routerLink]="['color']"
+        routerLinkActive="router-link-active"
+        >Color</a
+      >
+      <a
+        *ngIf="!isLogged()"
+        class="nav-item nav-link"
+        [routerLink]="['login']"
+        routerLinkActive="router-link-active"
+        >Login</a
+      >
+      <a
+        *ngIf="isLogged()"
+        class="nav-item nav-link"
+        (click)="logout()"
+        >Logout</a
+      >
     </div>
   </div>
 </nav>

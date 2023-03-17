@@ -22,7 +22,9 @@ export class HeaderComponent implements OnInit {
     this.authentificationService.logout();
   }
 
-
+  isLogged(): boolean{
+    return this.authentificationService.isLogged();
+  }
 
   show(){
     this.visibility = ! this.visibility;
