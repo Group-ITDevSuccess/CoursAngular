@@ -29,6 +29,7 @@ import { ObservableComponent } from './components/observable/observable.componen
 import { HttpComponent } from './components/http/http.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginInterceptorProvider } from './interceptors/login.interceptor';
+import { LoginGuard } from './guard/login.guard';
 
 
 @NgModule({
@@ -62,7 +63,7 @@ import { LoginInterceptorProvider } from './interceptors/login.interceptor';
     HttpClientModule,
     ROUTING
   ],
-  providers: [LoginInterceptorProvider],
+  providers: [LoginInterceptorProvider, LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
